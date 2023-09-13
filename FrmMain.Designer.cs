@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.btnPatchQQ = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.lblQQDir = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.btnFixQQCorrupt = new System.Windows.Forms.Button();
             this.lblQQVersion = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -47,15 +46,15 @@
             this.btnPatchQQ.UseVisualStyleBackColor = true;
             this.btnPatchQQ.Click += new System.EventHandler(this.btnPatchQQ_Click);
             // 
-            // label1
+            // lblStatus
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(12, 425);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "状态：等待";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblStatus.Location = new System.Drawing.Point(12, 425);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(109, 20);
+            this.lblStatus.TabIndex = 1;
+            this.lblStatus.Text = "状态：等待";
             // 
             // lblQQDir
             // 
@@ -66,13 +65,6 @@
             this.lblQQDir.Size = new System.Drawing.Size(129, 20);
             this.lblQQDir.TabIndex = 2;
             this.lblQQDir.Text = "QQ路径：未知";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(204, 425);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(475, 23);
-            this.progressBar1.TabIndex = 3;
             // 
             // btnFixQQCorrupt
             // 
@@ -102,13 +94,13 @@
             this.ClientSize = new System.Drawing.Size(691, 457);
             this.Controls.Add(this.lblQQVersion);
             this.Controls.Add(this.btnFixQQCorrupt);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.lblQQDir);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnPatchQQ);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LiteLoader Patcher & Fixer";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.ResumeLayout(false);
@@ -119,9 +111,8 @@
         #endregion
 
         private System.Windows.Forms.Button btnPatchQQ;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblQQDir;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button btnFixQQCorrupt;
         private System.Windows.Forms.Label lblQQVersion;
     }
