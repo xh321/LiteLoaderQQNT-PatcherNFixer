@@ -1,5 +1,7 @@
 # LiteLoaderQQNT - 全自动修补和修复工具
 
+# 请注意，高于16183（不包含16183）版本无法使用本工具修补，但是新版本方法已经有了，只是需要一段时间来适配，请耐心等待！
+
 LiteLoaderQQNT的实用软件，用于对`QQ.exe`进行修补，并修复可能提示的文件损坏问题。
 使用前需要安装[LiteLoaderQQNT](https://github.com/mo-jinran/LiteLoaderQQNT)，并在QQNT新版上使用。
 
