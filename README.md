@@ -1,24 +1,18 @@
 # LiteLoaderQQNT - 全自动修补和修复工具
 
-# 请注意，高于16183（不包含16183）版本无法使用本工具修补，但是新版本方法已经有了（[QQNTFileVerifyPatch](https://github.com/LiteLoaderQQNT/QQNTFileVerifyPatch)）
-# 如果你要用新版LiteLoaderQQNT 1.0，请使用新工具而不是本工具做Pacth（即使你的版本是16183及以下），因为1.x版本框架修改的文件和0.x版本框架修改的文件不一样，本修补器对新版本框架无用）
-# 使用本修补器Patch过的QQ仍然可以被新版本修补器Patch，它们是兼容的，不过仍然建议将QQ还原为初始版本再用新版本修补器Patch。
-
-
+## 现在，高于9.9.2-16183的版本可以继续使用本工具修补，你还可以使用另一个修补器（[QQNTFileVerifyPatch](https://github.com/LiteLoaderQQNT/QQNTFileVerifyPatch)）
 LiteLoaderQQNT的实用软件，用于对`QQ.exe`进行修补，并修复可能提示的文件损坏问题。
 使用前需要安装[LiteLoaderQQNT](https://github.com/mo-jinran/LiteLoaderQQNT)，并在QQNT新版上使用。
 
-本软件的作用与LiteLoaderQQNT说明中提到的`Patch`方法原理一样，不过因为`Powershell`脚本有些用户不太会用，所以有这么一个程序来替代。
+目前兼容已知的所有QQ版本，同时兼容>=1.0版本的框架和0.x版本的框架。
 
 ## 使用方法
 
-直接去`release`中下载最新发布版本，然后用管理员权限运行，一键修复，完工！
+直接去`release`中下载最新发布版本，然后用管理员权限运行（默认就是管理员权限运行），一键修复，完工！
 
-目前测试最高支持9.9.2-16183。理论上从9.9.1到9.9.2-16183均可使用。
+0.x版本框架最高支持到9.9.2-16183，>=1.0版本框架支持目前已知的所有QQNT版本。
 
-更高版本暂未测试。
-
-
+目前已经测试9.9.2-16183（0.x版本修补和1.0版本修补都OK）、9.9.6-19189（1.x版本修补）、9.9.6-19527（1.x版本修补）、9.9.7-20811（1.x版本修补）。
 
 ## 协议及免责
 

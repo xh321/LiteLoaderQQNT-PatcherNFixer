@@ -36,15 +36,15 @@
             this.btnRestore = new System.Windows.Forms.Button();
             this.btnManualSelectQQDir = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnGotoNewPatcher = new System.Windows.Forms.Button();
+            this.radNewVersion = new System.Windows.Forms.RadioButton();
+            this.radOldVersion = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPatchQQ
             // 
             this.btnPatchQQ.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnPatchQQ.Location = new System.Drawing.Point(169, 50);
+            this.btnPatchQQ.Location = new System.Drawing.Point(300, 57);
             this.btnPatchQQ.Name = "btnPatchQQ";
             this.btnPatchQQ.Size = new System.Drawing.Size(265, 62);
             this.btnPatchQQ.TabIndex = 0;
@@ -75,7 +75,7 @@
             // btnFixQQCorrupt
             // 
             this.btnFixQQCorrupt.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnFixQQCorrupt.Location = new System.Drawing.Point(169, 144);
+            this.btnFixQQCorrupt.Location = new System.Drawing.Point(300, 151);
             this.btnFixQQCorrupt.Name = "btnFixQQCorrupt";
             this.btnFixQQCorrupt.Size = new System.Drawing.Size(265, 62);
             this.btnFixQQCorrupt.TabIndex = 4;
@@ -96,7 +96,7 @@
             // btnRestore
             // 
             this.btnRestore.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRestore.Location = new System.Drawing.Point(169, 239);
+            this.btnRestore.Location = new System.Drawing.Point(300, 246);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(265, 62);
             this.btnRestore.TabIndex = 6;
@@ -120,45 +120,46 @@
             this.openFileDialog1.Filter = "QQ.exe|QQ.exe";
             this.openFileDialog1.InitialDirectory = "C:\\Program Files\\Tencent\\QQNT";
             // 
-            // btnGotoNewPatcher
+            // radNewVersion
             // 
-            this.btnGotoNewPatcher.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnGotoNewPatcher.ForeColor = System.Drawing.Color.Red;
-            this.btnGotoNewPatcher.Location = new System.Drawing.Point(465, 239);
-            this.btnGotoNewPatcher.Name = "btnGotoNewPatcher";
-            this.btnGotoNewPatcher.Size = new System.Drawing.Size(205, 62);
-            this.btnGotoNewPatcher.TabIndex = 8;
-            this.btnGotoNewPatcher.Text = "打开新修补器项目主页";
-            this.btnGotoNewPatcher.UseVisualStyleBackColor = true;
-            this.btnGotoNewPatcher.Click += new System.EventHandler(this.btnGotoNewPatcher_Click);
+            this.radNewVersion.AutoSize = true;
+            this.radNewVersion.Checked = true;
+            this.radNewVersion.Location = new System.Drawing.Point(17, 57);
+            this.radNewVersion.Name = "radNewVersion";
+            this.radNewVersion.Size = new System.Drawing.Size(98, 19);
+            this.radNewVersion.TabIndex = 11;
+            this.radNewVersion.TabStop = true;
+            this.radNewVersion.Text = ">=1.0版本";
+            this.radNewVersion.UseVisualStyleBackColor = true;
+            // 
+            // radOldVersion
+            // 
+            this.radOldVersion.AutoSize = true;
+            this.radOldVersion.Enabled = false;
+            this.radOldVersion.Location = new System.Drawing.Point(18, 82);
+            this.radOldVersion.Name = "radOldVersion";
+            this.radOldVersion.Size = new System.Drawing.Size(82, 19);
+            this.radOldVersion.TabIndex = 12;
+            this.radOldVersion.Text = "0.x版本";
+            this.radOldVersion.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(465, 311);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 137);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "新修补器支持新版本LiteLoaderQQNT框架（版本号>1.0）且支持大于16183版本的QQNT（本修补器均不支持）";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(165, 307);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(269, 20);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "↑使用新修补器前建议使用↑";
+            this.label1.Size = new System.Drawing.Size(254, 15);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "想要安装的LiteLoaderQQNT框架版本";
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 457);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(604, 457);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnGotoNewPatcher);
+            this.Controls.Add(this.radOldVersion);
+            this.Controls.Add(this.radNewVersion);
             this.Controls.Add(this.btnManualSelectQQDir);
             this.Controls.Add(this.btnRestore);
             this.Controls.Add(this.lblQQVersion);
@@ -170,7 +171,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LiteLoader Patcher & Fixer";
+            this.Text = "LiteLoader Patcher & Fixer v1.2";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -187,9 +188,9 @@
         private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.Button btnManualSelectQQDir;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button btnGotoNewPatcher;
+        private System.Windows.Forms.RadioButton radNewVersion;
+        private System.Windows.Forms.RadioButton radOldVersion;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }
 
