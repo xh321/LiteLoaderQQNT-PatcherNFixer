@@ -95,7 +95,7 @@ namespace LiteLoaderPatchNFixer
             if ( index1 < 0 )
             {
                 // Not found
-                MessageBox.Show( "修补失败！对应序列未找到，可能是QQ版本不兼容。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error );
+                MessageBox.Show( "修补失败！对应序列未找到，可能是QQ已经被修补或者版本不兼容。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error );
                 return;
             }
 

@@ -80,6 +80,10 @@ namespace LiteLoaderPatchNFixer
             {
                 File.Copy( QQDir + "\\QQ.exe", QQDir + $"\\QQ.exe.{QQVersion}.bak" );
             }
+            else
+            {
+                MessageBox.Show( "注意，已经找到QQ的备份文件，你之前是否已经对QQ进行过修补？重新修补只会失败。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning );
+            }
 
             lblStatus.Text = "状态：修补QQ.exe中";
             if ( radNewVersion.Checked )
@@ -173,7 +177,7 @@ namespace LiteLoaderPatchNFixer
             MessageBox.Show( "注意：仅支持还原经过本修补器修补后的QQ。点击确定后自动终止所有QQ进程。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information );
 
             Process.Start( "cmd", "/c taskkill /F /IM QQ.exe" )?.WaitForExit();
-            
+
             lblStatus.Text = "状态：还原QQ中";
             try
             {
@@ -215,7 +219,7 @@ namespace LiteLoaderPatchNFixer
                     return;
                 }
             }
-            
+
             lblStatus.Text = "状态：完毕";
             MessageBox.Show( "还原成功！现在QQ处于未修补状态。请注意，如果你使用了>=1.0版本的框架，需要手动恢复resources/app/app_launcher/index.js。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information );
         }
@@ -231,6 +235,18 @@ namespace LiteLoaderPatchNFixer
                 QQVersion = versionData[ "version" ].ToString().Replace( "-", "." ).Trim();
                 FrmMain_Load( null, null );
             }
+        }
+
+        private void radOldVersion_CheckedChanged( object    sender,
+                                                   EventArgs e )
+        {
+            btnFixQQCorrupt.Enabled = true;
+        }
+
+        private void radNewVersion_CheckedChanged( object    sender,
+                                                   EventArgs e )
+        {
+            btnFixQQCorrupt.Enabled = false;
         }
     }
 }

@@ -131,6 +131,7 @@
             this.radNewVersion.TabStop = true;
             this.radNewVersion.Text = ">=1.0版本";
             this.radNewVersion.UseVisualStyleBackColor = true;
+            this.radNewVersion.CheckedChanged += new System.EventHandler(this.radNewVersion_CheckedChanged);
             // 
             // radOldVersion
             // 
@@ -142,6 +143,7 @@
             this.radOldVersion.TabIndex = 12;
             this.radOldVersion.Text = "0.x版本";
             this.radOldVersion.UseVisualStyleBackColor = true;
+            this.radOldVersion.CheckedChanged += new System.EventHandler(this.radOldVersion_CheckedChanged);
             // 
             // label1
             // 
@@ -171,7 +173,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LiteLoader Patcher & Fixer v1.2";
+            this.Text = "LiteLoader Patcher & Fixer v1.3";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
